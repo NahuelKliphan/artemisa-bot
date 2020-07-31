@@ -39,7 +39,7 @@ client.on("message", (message) => {
                     //Poner reaccion info
                 } else {
                     if (usuarioEnArtemisa != message.author.id) {
-                        message.channel.send("<@" + message.author.id + "> nunca estuviste en artemisa");
+                        message.channel.send("<@" + message.author.id + "> no estabas en artemisa");
                         //Poner reaccion info
                     } else {
                         client.user.setPresence({ activity: { name: "compilar libre" }, status: "online" });
