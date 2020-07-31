@@ -21,6 +21,8 @@ client.on("message", (message) => {
                     //Cambiar de estado
                     //Poner reaccion copada
 
+                    message.channel.send("<@" + usuarioEnArtemisa + "> entro a artemisa");
+
                 }else{
 
                     if(usuarioEnArtemisa != message.author.id){
@@ -73,8 +75,20 @@ client.on("message", (message) => {
                 message.channel.send(saludo);
                 break;
             };
-        }
+            case 'quien te creo?': {
 
+                var saludo = "Charly pa";
+                message.channel.send(saludo);
+                break;
+            };
+
+            default: {
+
+                message.channel.send("<@" + message.author.id + "> no te entendí amigo");
+                break;
+            };
+
+        }
     }
 });
 client.login(auth.Token);
