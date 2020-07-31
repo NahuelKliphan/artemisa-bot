@@ -12,8 +12,9 @@ client.on("ready", (evt) => {
 
 client.on("message", (message) => {
     if (message.content.startsWith("!")) {
-        var comando = message.content.split("!")[1];
-        message.delete();
+
+        var comando = message.content.split("!")[1].toLowerCase() ;
+
         switch (comando) {
             case 'entrar': {
                 if (usuarioEnArtemisa == null) {
@@ -59,7 +60,7 @@ client.on("message", (message) => {
                 }
                 break;
             };
-            case 'Hola Artemisa': {
+            case 'hola artemisa': {
                 var saludo = "Hola :wave: me presento. Mi nombre es Artemisa y acepto las siguientes ordenes:";
                 saludo += "\n :white_check_mark: !entrar -> Para informarme que entras";
                 saludo += "\n :white_check_mark: !salir -> Para informarme que salis";
@@ -67,8 +68,8 @@ client.on("message", (message) => {
                 message.channel.send(saludo);
                 break;
             };
-            case 'Quien te creo?': {
-                var saludo = "El mas kapo de Charly";
+            case 'quien te creo?': {
+                var saludo = "Mi creador es Charly el mas kapo!";
                 message.channel.send(saludo);
                 break;
             };
