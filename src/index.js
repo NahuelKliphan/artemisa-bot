@@ -26,7 +26,7 @@ client.on("message", (message) => {
                 } else {
                     if (usuarioEnArtemisa != message.author.id) {
                         //Poner reaccion mala
-                        message.channel.send("Artemisa está ocupada por <@" + usuarioEnArtemisa + "> ");
+                        message.channel.send("Esoy ocupada por <@" + usuarioEnArtemisa + "> ");
                     } else {
                         message.channel.send("Ya estas en artemisa. Para salir usa el comando '!salir'");
                         //Poner reaccion info
@@ -36,7 +36,7 @@ client.on("message", (message) => {
             };
             case 'salir': {
                 if (usuarioEnArtemisa == null) {
-                    message.channel.send("<@" + message.author.id + "> nunca estuviste en artemisa");
+                    message.channel.send("<@" + message.author.id + "> no estabas en artemisa");
                     //Poner reaccion info
                 } else {
                     if (usuarioEnArtemisa != message.author.id) {
@@ -54,9 +54,9 @@ client.on("message", (message) => {
             };
             case 'alguien': {
                 if (usuarioEnArtemisa == null) {
-                    message.channel.send("Artemisa libre");
+                    message.channel.send("Estoy libre");
                 } else {
-                    message.channel.send("Artemisa esta ocupado por <@" + usuarioEnArtemisa + ">");
+                    message.channel.send("Estoy ocupada por <@" + usuarioEnArtemisa + ">");
                 }
                 break;
             };
