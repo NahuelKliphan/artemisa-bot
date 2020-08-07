@@ -60,6 +60,10 @@ client.on("message", (message) => {
                 }
                 break;
             };
+            case 'rip': {
+                client.user.setPresence({ activity: { name: 'rip :(' }, status: "online" });
+                break;
+            };
             case 'hola artemisa': {
                 var saludo = "Hola :wave: me presento. Mi nombre es Artemisa y acepto las siguientes ordenes:";
                 saludo += "\n :white_check_mark: !entrar -> Para informarme que entras";
