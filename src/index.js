@@ -89,17 +89,6 @@ client.on("message", (message) => {
                 message.channel.send(saludo);
                 break;
             };
-            case '-reset': {
-                message.delete();
-                client.user.setPresence({ activity: { name: "compilar libre" }, status: "online" });
-                saveData(usuario);
-                break;
-            };
-            case '-update': {
-                message.delete();
-                message.channel.send("He tenido algunas perdidas de memoria que me hacian fallar :woozy_face:. Pero despues de algunos ajuste ya me siento mucho mejor :muscle: :nerd:");
-                break;
-            };
             default: {
                 message.channel.send("<@" + message.author.id + "> no te entendí. Usa el comando '!Hola Artemisa' para mas ayuda");
                 break;
