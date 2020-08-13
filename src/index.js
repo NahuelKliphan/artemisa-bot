@@ -1,9 +1,18 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var fs = require('fs');
 var auth = require("./auth.json");
+var admin = require("firebase-admin");
+var serviceAccount = require("../artemisa-bot-key.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://artemisa-bot.firebaseio.com/"
+});
+
+const db = admin.database();
 
 var usuario = {
+    id: null,
     codigo: null,
     nombre: null
 };
@@ -12,19 +21,18 @@ client.login(auth.Token);
 
 client.on("ready", (evt) => {
 
-    if (fs.existsSync('./database/data.json')) {
-        var dataFile = fs.readFileSync('./database/data.json');
-        usuario = JSON.parse(dataFile);
-    } else {
-        console.log("No existe")
-        saveData(usuario);
-    }
-    if (usuario.codigo != null) {
-        client.user.setPresence({ activity: { name: "compilar con " + usuario.nombre }, status: "online" });
-    } else {
-        client.user.setPresence({ activity: { name: "compilar libre" }, status: "online" });
-    }
-    console.log("Listo!");
+    var ref = db.ref("usuario");
+    ref.orderByChild("codigo").on("child_added", function (snapshot) {
+        usuario = snapshot.val();
+        usuario.id = snapshot.key;
+        if (usuario.codigo != null) {
+            client.user.setPresence({ activity: { name: "compilar con " + usuario.nombre }, status: "online" });
+        } else {
+            client.user.setPresence({ activity: { name: "compilar libre" }, status: "online" });
+        }
+        console.log("Listo!");
+    });
+
 });
 
 client.on("message", (message) => {
@@ -39,7 +47,7 @@ client.on("message", (message) => {
                     usuario.nombre = message.author.username;
                     client.user.setPresence({ activity: { name: "compilar con " + usuario.nombre }, status: "online" });
                     message.channel.send("<@" + usuario.codigo + "> entró a artemisa");
-                    saveData(usuario);
+                    updateData(usuario);
                 } else {
                     if (usuario.codigo != message.author.id) {
                         message.channel.send("Esoy ocupada por <@" + usuario.codigo + "> ");
@@ -60,7 +68,7 @@ client.on("message", (message) => {
                         message.channel.send("<@" + usuario.codigo + "> salió de artemisa");
                         usuario.codigo = null
                         usuario.nombre = null;
-                        saveData(usuario);
+                        updateData(usuario);
                     }
                 }
                 break;
@@ -101,13 +109,13 @@ client.on("message", (message) => {
 });
 
 function saveData(usuario) {
+    db.ref("usuario").push(usuario);
+}
 
-    var data = JSON.stringify(usuario);
-    fs.writeFile('./database/data.json', data, function (err) {
-        if (err) {
-            console.log('Error al guardar el archivo data.');
-            console.log(err.message);
-            return;
-        }
+function updateData(usuario) {
+
+    db.ref('usuario/' + usuario.id).set({
+        codigo: usuario.codigo,
+        nombre: usuario.nombre
     });
 }

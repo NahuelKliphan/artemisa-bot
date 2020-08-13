@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "artemisa-bot",
+  "private_key_id": "a48fc56c53b43e448c0a78585da109f290bfaf03",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCYgZHUjLygKr8N\n9Sj4DyalHFb294zyYtYg4m7BOpI3OwJH+vpTr1nbQC95WYxxTcx7xx7g/dx1eDhy\nwRv768H3CHQJze3W62znWCqIUNho3YRaRBGYABtwi/67PnrhBWNe7um5GaCHGEhz\nZHw6Zu3cQ/WV5RvleWSJ4bV9d5zExSXEfWABKkiiEU/hpz5QNkwKmduoGIxC9nl0\n8p53glvgD0YB03bUhEaO1JYfhx96XkvcXOL+oR8R4K9YR1XhVbWGOzAtyLnEUQjz\nQmGWAq5PM2j0RYYp/v9rN4InvOeiSTSF7ghwd4ukgCVS7BtUzWUHoHGhWegXmfS3\nvU0MKlz3AgMBAAECggEALOmnrV1/JXpBRtaG6LrpiiGU+OmBkFaMMiYNMQnTSsGt\nk841j5SqFVhLQuUc57deO6uyC9enZ87ubNkzKRdOybYrGkITw8IUkfMUn42Tlhp6\nomy+c7HAYv5PmAw3+vHvyGL64QDLlk2P9K/IqBhs/3viJPFSrFt6QOMAZIFn4Uir\na27ZyYQO9HXl/M1B/BOn75hRv0qjBxGUIYDA1zXAdzi9qgVJb2PGwOOBO2emcNDV\nf/Ux/P5deeZDsh1pJX27LseIg5Fn6A2oj9IlYMO8pq1e0/naVrzc96FQpthsoE8p\nPkOZJWjN3kqfiBbQDIjnAYqWAt0MFglKbbPcHa8stQKBgQDWH0sreijl2HBKu/6i\nj/ldnOebmy/2cw95p7gHbm3hgGUAJt6bkE/zCWI2yqI92gdnTc8AqjJ58jJGwPgZ\nd4uSX+L8pyFyTD2FOH3crklPO0t5aktYFvdvI6bM2YlB4ptSNEGcymgqLRdAC/s1\ndWUlebwGg+4ra0OUFM8D66rihQKBgQC2VUVXkob0LEtjlw/PoNV3UmpqPBwT/Sn8\nZf2k+D2APkpX24ptchF0G8bE3jXQKIDGqatxhI47wHTeVGer2DhI/CR+o109iqNh\nRt8cU7y4vi5cPs7tyHGlRQ+vvTg5UC+ICgzvvmnMDc16aDIYRw1RJ/2393clBp6s\nQQoTcNIASwKBgAI+m7wd8LXQGgU+iUHM/pEzpt3jt5H+zMe6sVwqlS5K+UQSJD0/\nOwdSLtxiLWc2lONJVoUsQ5Exr8M8HJ2vuh/Tr350hg47rF1sJS2eChixh24DZjzL\nKNbaadI16ZFuPbCT6agqGwNuK5M5TO3XiDLnXsg2s9Vyr2eq/CyPWOA9An9R5/w+\nWpRFG6DCHBn+K0G5WEx1bIswb4ls2GQYt2rpMRI0ZWrJv3QXtGKWDTwfRhKTK6TY\nWbOLI+lb9o6bo4WlQ58hREGeY6kBCdUv5G3ij4xD4/MQ3fovQ9bIGzgmht7TPbCS\nAfeEsq6bTjMytLhGvLA88+2RtGeS+aSNFyE/AoGAFI4BKlHGLKrxtJZw6Nf4225g\njHh9jGXJAfagvrf6lWxv29/ZPsAqX6rsITfEhHWvxtPLNWPFjMcnilppzqrL+OnK\nrPXSnRXYLci4xDsVSqCItiT70DnLhnu9fg6/4sW69tdW/T9Iz3q06in5FC5Y9B2N\nnStIUCsUruADKIu+TRE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-leqts@artemisa-bot.iam.gserviceaccount.com",
+  "client_id": "107507335394570152886",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-leqts%40artemisa-bot.iam.gserviceaccount.com"
+}
